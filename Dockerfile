@@ -1,12 +1,12 @@
 # Stufe 1: JAR mit Maven bauen (Tests laufen in der CI)
-FROM maven:3-eclipse-temurin-21 AS build
+FROM maven:3-eclipse-temurin-25 AS build
 WORKDIR /src
 COPY pom.xml .
 COPY src ./src
 RUN mvn -B -DskipTests package
 
 # Stufe 2: schlankes JRE-Image
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:25-jre
 ARG APP_VERSION=dev
 ENV APP_VERSION=${APP_VERSION}
 WORKDIR /app
