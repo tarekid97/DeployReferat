@@ -7,6 +7,8 @@ Push auf `main` → Tests → Docker-Image (arm64) → Deployment per SSH.
 
 ## Lokal starten
 
+Voraussetzungen: Java 25 (LTS) und Maven 3.8.5 oder neuer.
+
 ```bash
 mvn -B verify
 java -jar target/app.jar
