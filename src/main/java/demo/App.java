@@ -1,15 +1,16 @@
 package demo;
 
-import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
+
+import com.sun.net.httpserver.HttpServer;
 
 public class App {
 
     static String greeting() {
         String version = System.getenv().getOrDefault("APP_VERSION", "dev");
-        return "Hello World from Java! Version: " + version;
+        return "Referat am 12.11.2026! Version: " + version;
     }
 
     public static void main(String[] args) throws IOException {
