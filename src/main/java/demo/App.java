@@ -10,7 +10,7 @@ public class App {
 
     static String greeting() {
         String version = System.getenv().getOrDefault("APP_VERSION", "dev");
-        return "Referat am 12.11.2026! Version: " + version;
+        return "Hello World from Java! Version: " + version;
     }
 
     public static void main(String[] args) throws IOException {
